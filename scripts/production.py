@@ -24,7 +24,7 @@ def promote_model_to_production():
     client = MlflowClient()
 
     # Get the latest model in the Staging stage
-    staging_versions = client.get_latest_version(model_name, stages=["Staging"])
+    staging_versions = client.get_latest_versions(model_name, stages=["Staging"])
     if not staging_versions:
         print("No model found in the 'Staging' stage.")
         return
@@ -32,7 +32,7 @@ def promote_model_to_production():
     staging_version_number = latest_staging_version.version
 
     # Get the current Production model, if any
-    production_versions = client.get_latest_version(model_name, stages=["Production"])
+    production_versions = client.get_latest_versions(model_name, stages=["Production"])
 
     if production_versions:
         current_production_version = production_versions[0]
