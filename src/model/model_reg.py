@@ -1,7 +1,7 @@
 import json
 from mlflow.tracking import MlflowClient
 import mlflow
-
+import os
 ##import dagshub
 ##dagshub.init(repo_owner='aamirbstele', repo_name='mlops_dvc_ci_video16', mlflow=True)
 
@@ -22,7 +22,7 @@ os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 dagshub_url = "https://dagshub.com"
 repo_owner = "aamirbstele"
 repo_name = "mlops_dvc_ci_video16"
-mlflow.set_tracking_uri(f"{dagshub_uri}/{repo_owner}/{repo_name}.mlflow")
+mlflow.set_tracking_uri(f"{dagshub_url}/{repo_owner}/{repo_name}.mlflow")
 mlflow.set_experiment("Final_Model")
 
 
