@@ -29,7 +29,7 @@ import os
 #os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
 #os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
-mlflow_url = "http://localhost:5000"
+mlflow_url = "http://mlflow:5000"
 repo_owner = "aamirbstele"
 repo_name = "mlops_dvc_ci_video16"
 ##mlflow.set_tracking_uri(f"{dagshub_url}/{repo_owner}/{repo_name}.mlflow")
