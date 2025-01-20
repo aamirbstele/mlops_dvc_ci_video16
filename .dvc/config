@@ -1,4 +1,9 @@
 [core]
-    remote = myremote
+    remote = myminio
 ['remote "myremote"']
     url = /tmp/dvc/mlops_dvc_ci_video16
+['remote "myminio"']
+    url = s3://dvc-remote/
+    endpointurl = http://localhost:9000
+    access_key_id = pncsyGKhSsHKleZcdBzb
+    secret_access_key = 2N0XuYb5hItccjQEmth8LLhmQuRJmB6STLfrHHXw
