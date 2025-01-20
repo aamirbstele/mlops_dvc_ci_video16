@@ -22,7 +22,7 @@ import os
 mlflow_url = "http://localhost:5000"
 repo_owner = "aamirbstele"
 repo_name = "mlops_dvc_ci_video16"
-mlflow.set_tracking_uri(f"{mlflow_url}.mlflow")
+mlflow.set_tracking_uri(f"{mlflow_url}")
 mlflow.set_experiment("Final_Model")
 
 
